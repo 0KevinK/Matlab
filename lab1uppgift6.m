@@ -3,7 +3,7 @@ close all;
 clc;
 R=input('Vad väger pumpan')
 l=1; %lägre gräns för slumpmässigt tal
-h=100; %högre gräns
+h=100; %övre gräns
 S=randi([l,h])
 Vek=[]
 i=1
