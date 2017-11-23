@@ -1,9 +1,9 @@
 clear all; 
 close all; 
 clc;
-R=input('Vad väger pumpan')
-l=1; %lägre gräns för slumpmässigt tal
-h=100; %högre gräns
+R=input('Vad vÃ¤ger pumpan')
+l=1; %lÃ¤gre grÃ¤ns fÃ¶r slumpmÃ¤ssigt tal
+h=100; %hÃ¶gre grÃ¤ns
 S=randi([l,h])
 Vek=[]
 i=1
@@ -13,8 +13,8 @@ while S~=R
         Vek(i)=S
         i=i+1
         S=randi([l,h])
-        %slump är större än rätt
-        %byter ut den övre gränsen med slumptalet
+        %slump Ã¤r stÃ¶rre Ã¤n rÃ¤tt
+        %byter ut den Ã¶vre grÃ¤nsen med slumptalet
     
     elseif S<R
         l=S 
@@ -25,7 +25,9 @@ while S~=R
     end
 end
 plot([1:1:length(Vek)],Vek,'-+r')
+xlabel('Gissningar')
+ylabel('Gissad vikt')
 if S==R
-    disp('Datorn har funnit vikten på pumpan')
+    disp('Datorn har funnit vikten pÃ¥ pumpan')
 end
 
