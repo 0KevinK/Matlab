@@ -9,15 +9,15 @@ Vek=[]
 i=1
 while S~=R
     if S>R
-        h=S
+        h=(S-1)
         Vek(i)=S
         i=i+1
         S=randi([l,h])
         %slump är större än rätt
-        %byter ut den övre gränsen med slumptalet
+        %byter ut den övre gränsen med slumptalet minus ett, då datorn kan annars plocka slumptalet igen
     
     elseif S<R
-        l=S 
+        l=(S+1) 
         Vek(i)=S
         i=i+1
         S=randi([l,h])
@@ -27,6 +27,7 @@ end
 plot([1:1:length(Vek)],Vek,'-+r')
 xlabel('Gissningar')
 ylabel('Gissad vikt')
+
 if S==R
     disp('Datorn har funnit vikten på pumpan')
 end
