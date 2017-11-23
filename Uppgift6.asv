@@ -1,0 +1,20 @@
+R=input('Vad väger pumpan')
+l=1; %lägre gräns för slumpmässigt tal
+h=100; %högre gräns
+S=randi([l,h])
+while S~=R
+    if S>R
+        l=S
+    elseif S<R
+        h=S     
+    end
+    S=randi([l,h])
+
+end
+if S==R
+    disp('Datorn har funnit vikten på pumpan')
+end
+
+
+     
+
